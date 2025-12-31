@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Performance SRS7",
+  "description": "Plataforma avançada de gestão de performance e alocação operacional para o centro logístico SRS7.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

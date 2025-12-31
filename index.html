@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance SRS7 - Gestão de Equipes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFE600',
+                            navy: '#2D3277',
+                            dark: '#F0F4F8', // Cor Gelo
+                            surface: '#FFFFFF', // Superfície Branca
+                            border: '#E2E8F0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #F0F4F8; /* Cor Gelo */
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #2D3277;
+        }
+        /* Efeito de vidro sutil adaptado para fundo claro */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(45, 50, 119, 0.1);
+        }
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+            .no-print { display: none !important; }
+            body { 
+                background: white !important; 
+                color: black !important; 
+                padding: 0 !important;
+            }
+            #root {
+                padding: 0 !important;
+            }
+            .print-only { display: block !important; }
+            .bg-brand-surface, .bg-brand-dark, .bg-brand-navy { 
+                background: white !important; 
+                color: black !important; 
+                border: 1px solid #eee !important; 
+                box-shadow: none !important;
+            }
+            .text-white, .text-brand-yellow, .text-emerald-400, .text-red-500 { 
+                color: black !important; 
+            }
+            .border-white\/5, .border-white\/10 {
+                border-color: #eee !important;
+            }
+            .rounded-\[40px\], .rounded-\[32px\] {
+                border-radius: 12px !important;
+            }
+            aside, header { display: none !important; }
+            main { padding: 0 !important; margin: 0 !important; }
+            .flex-1 { overflow: visible !important; }
+            .p-10 { padding: 15px !important; }
+            .gap-8, .gap-12 { gap: 10px !important; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+</head>
+<body class="bg-brand-dark text-slate-900 transition-colors duration-200">
+    <div id="root"></div>
+</body>
+</html>
